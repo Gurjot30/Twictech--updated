@@ -568,8 +568,14 @@ body {
 
 .dropdown {
   position: relative;
-  padding-bottom: 15px; /* Gives space for cursor to move down */
+  padding-bottom: 5px; /* Gives space for cursor to move down */
 }
+
+.contact-item {
+  padding-bottom: 5px; /* Adjust the value as needed */
+  position: relative; /* Or 'absolute', 'fixed', depending on your layout */
+}
+
 
 .dropdown-menu {
   position: absolute;
