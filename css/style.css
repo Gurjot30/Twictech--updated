@@ -566,6 +566,11 @@ body {
   font-size: 12px;
 }
 
+.dropdown {
+  position: relative;
+  padding-bottom: 15px; /* Gives space for cursor to move down */
+}
+
 .dropdown-menu {
   position: absolute;
   top: 110%;
@@ -592,6 +597,12 @@ body {
 
 .dropdown-menu li a:hover {
   color: #5b0e2d;
+}
+
+/* Keep dropdown open on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: flex;
 }
 
 .nav-links li:hover .dropdown-menu {
