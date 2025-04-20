@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="img/favicon.ico" rel="icon" />
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- intl-tel-input CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+
+  <body>
+    <!-- Topbar Start 
+     <div class="container-fluid bg-primary p-0" id="home">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start text-white">
+                <div class="h-100 d-inline-flex  align-items-center py-3 me-4">
+                    <i class="fa-regular fa-clock me-2"></i>
+                    <span> Working Hours : 10AM - 08PM</span>
+                </div>
+                <div class="h-100 d-inline-flex text-white align-items-center py-3">
+                    <i class="fa-regular fa-envelope-open me-2"></i>
+                    <span>info@example.com</span>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex text-white align-items-center py-3 me-4">
+                    <span class="fa fa-phone-alt text-primary me-2"></span>
+                    <span>Browse Our Success Stories</span>
+                </div>
+                  <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <! Topbar End -->
+
+    <!-- Pop Up Form Modal -->
+    <div id="popupForm" class="modal">
+      <div class="modal-content">
+        <!-- Heading Section at the Top -->
+        <div class="modal-header">
+          <img
+            src="img/modalheader.jpeg"
+            alt="Header Background"
+            class="header-bg"
+          />
+          <h2>We're ready to launch this partnership with you!</h2>
+          <p>See if we're the best match – take the first step</p>
+          <button class="close-popup">✖</button>
+          <!-- Ensure this button exists -->
+        </div>
+
+        <!-- Form Sections -->
+        <div class="modal-body">
+          <!-- Left Form -->
+          <div class="form-left">
+            <form id="enquiryForm">
+              <!-- First Name & Last Name in One Line -->
+              <div class="name-group">
+                <div>
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" required />
+                </div>
+                <div>
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" required />
+                </div>
+              </div>
+
+              <!-- Business Email & Phone in One Line -->
+              <div class="contact-group">
+                <div>
+                  <label for="businessEmail">Business Email *</label>
+                  <input type="email" id="businessEmail" required />
+                </div>
+                <div>
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+              </div>
+
+              <label for="companyName">Company Name *</label>
+              <input type="text" id="companyName" required />
+
+              <!-- Services Interested In Section -->
+              <div class="checkbox-group-container">
+                <label class="checkbox-label">Services Interested In:</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" /> Managed IT</label>
+                  <label><input type="checkbox" /> Cloud Services</label>
+                  <label><input type="checkbox" /> Cybersecurity</label>
+                  <label><input type="checkbox" /> IT Consulting</label>
+                  <label><input type="checkbox" /> Other</label>
+                </div>
+              </div>
+
+              <label for="referral">How did you find out about us? *</label>
+              <select id="referral" required>
+                <option value="">Select an option</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Promotions">Promotions</option>
+                <option value="Friends">Friends</option>
+                <option value="other">Other</option>
+              </select>
+
+              <!-- Newsletter Subscription -->
+              <div class="newsletter-container">
+                <input type="checkbox" id="subscribe" />
+                <label for="subscribe"
+                  >Yes, subscribe me to your newsletter.</label
+                >
+              </div>
+
+              <label for="comments">Comments</label>
+              <textarea id="comments"></textarea>
+
+              <!-- Submit Button -->
+              <div class="submit-container">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Section -->
+          <div class="form-right">
+            <h2 class="form-right">
+              <span class="blue-text">Upgrade to</span>
+              <span class="orange-text">Better IT Support</span>
+              <span class="blue-text">Today</span>
+            </h2>
+
+            <div class="contact-box">
+              <i class="fas fa-envelope icon"></i>
+              <h3>Email</h3>
+              <p>xyz@gmail.com</p>
+            </div>
+
+            <div class="contact-box">
+              <i class="fas fa-phone icon"></i>
+              <h3>Phone</h3>
+              <p>964xxxxxx7</p>
+            </div>
+
+            <div class="contact-box">
+              <i class="fas fa-map-marker-alt icon"></i>
+              <h3>Address</h3>
+              <p>
+                ABC colony<br />
+                Punjab, india
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pop Up Form -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light shadow-sm sticky-top p-0"
+    >
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+      >
+        <img src="img/logo.png" width="150" alt="Company Logo" />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <!-- Company Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Company</a>
+            <div class="dropdown-menu">
+              <a href="#about-us" class="dropdown-item">About Us</a>
+              <a href="#team" class="dropdown-item">Our Team</a>
+              <a href="#careers" class="dropdown-item">Careers</a>
+            </div>
+          </div>
+
+          <!-- Solutions Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Solutions</a>
+            <div class="dropdown-menu">
+              <a href="#web" class="dropdown-item">Web Development</a>
+              <a href="#app" class="dropdown-item">App Development</a>
+              <a href="#uiux" class="dropdown-item">UI/UX Design</a>
+              <a href="#marketing" class="dropdown-item">Digital Marketing</a>
+            </div>
+          </div>
+
+          <!-- Industries Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Industries</a>
+            <div class="dropdown-menu">
+              <a href="#healthcare" class="dropdown-item">Healthcare</a>
+              <a href="#finance" class="dropdown-item">Finance</a>
+              <a href="#education" class="dropdown-item">Education</a>
+              <a href="#ecommerce" class="dropdown-item">E-commerce</a>
+            </div>
+          </div>
+
+          <!-- Portfolio Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Portfolio</a>
+            <div class="dropdown-menu">
+              <a href="#testimonials" class="dropdown-item"
+                >Client Testimonials</a
+              >
+              <a href="#success-stories" class="dropdown-item"
+                >Success Stories</a
+              >
+            </div>
+          </div>
+
+          <!-- Our Approach Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Our Approach</a>
+            <div class="dropdown-menu">
+              <a href="#how-we-work" class="dropdown-item">How We Work</a>
+              <a href="#why-twitech" class="dropdown-item">Why Twitech</a>
+            </div>
+          </div>
+
+          <!-- Contact Us (Without Dropdown) -->
+          <div class="nav-item">
+            <a href="#contact-form" class="nav-link">Contact Us</a>
+          </div>
+          <!-- Book a Consultant Button -->
+          <div class="btn-container">
+            <a href="contact.html" class="btn-contact">
+              <div class="btn-circle">
+                <div class="inner-circle">
+                  <span class="btn-icon">»</span>
+                </div>
+              </div>
+              <div class="btn-rectangle">
+                <span class="btn-text">Book a Appointment</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h2>Crafting Digital Experiences with Passion</h2>
+            <p class="lead">
+              Transforming ideas into elegant solutions through creative design
+              and innovative development
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+              <a href="#portfolio" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-outline">Let's Connect</a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider-container1">
+            <div class="slide active">
+              <div class="hero-image">
+                <img
+                  src="img/profile-1.webp"
+                  alt="Portfolio Hero Image 1"
+                  class="img-fluid"
+                  data-aos="zoom-out"
+                  data-aos-delay="300"
+                />
+                <div class="shape-1"></div>
+                <div class="shape-2"></div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="hero-image">
+                <img
+                  src="img/profile-2.webp"
+                  alt="Portfolio Hero Image 2"
+                  class="img-fluid"
+                  data-aos="zoom-out"
+                  data-aos-delay="300"
+                />
+                <div class="shape-1"></div>
+                <div class="shape-2"></div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="hero-image">
+                <img
+                  src="img/profile-3.webp"
+                  alt="Portfolio Hero Image 3"
+                  class="img-fluid"
+                  data-aos="zoom-out"
+                  data-aos-delay="300"
+                />
+                <div class="shape-1"></div>
+                <div class="shape-2"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="slider-nav">
+            <button class="prev-btn">&#10094;</button>
+            <button class="next-btn">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- About Start -->
+    <section class="about ptb-80" id="about">
+      <div class="container">
+        <div class="row v-center">
+          <div class="col-lg-6">
+            <img src="img/abuleft.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-lg-6" data-wow-delay="0.1s">
+            <span class="subtitle-two">About Us</span>
+            <h2 class="mb-3">We Are Twictech in Digital Solutions</h2>
+            <p class="mb-3 pera">
+              In a world where technology shapes the future, Twictech IT
+              Solution leads the way in driving digital innovation. Our mission
+              is to empower businesses with transformative digital solutions,
+              enabling them to thrive in a competitive landscape. With a
+              passionate team and cutting-edge technology, we craft tailored
+              solutions that address your unique challenges, ensuring growth and
+              success.
+            </p>
+            <p class="fw-medium pera">
+              <i class="fa fa-check fontset me-3 p-1 border shadow-sm"></i
+              >Innovative and customized digital solutions.
+            </p>
+            <p class="fw-medium pera">
+              <i class="fa fa-check fontset me-3 p-1 border shadow-sm"></i
+              >Expert team with cutting-edge technology.
+            </p>
+            <p class="fw-medium pera">
+              <i class="fa fa-check fontset me-3 p-1 border shadow-sm"></i
+              >Comprehensive services from web development to app creation.
+            </p>
+            <p class="fw-medium pera mb-4">
+              <i class="fa fa-check fontset me-3 p-1 border shadow-sm"></i
+              >Professional electrical wiring and repairs expertise.
+            </p>
+            <a href="contact.html" class="btn-two">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Partner's Hub Start-->
+    <section class="main-container">
+      <!-- Left Section (Partner Hub) -->
+      <div class="partner-section">
+        <h1>Partner Hub</h1>
+        <p>
+          At Twictech, we value collaboration. Our partners drive innovation and
+          deliver exceptional solutions. Joining us provides access to our
+          expertise, cutting-edge technology, and growth opportunities.
+          Together, we transform challenges into successes and foster
+          excellence.
+        </p>
+        <a href="#" class="know-more-box">➜ Know more</a>
+      </div>
+
+      <div class="stats-section">
+        <!-- First Column (2 Boxes) -->
+        <div class="stats-column">
+          <div class="stat-box years">
+            <div class="image-container"></div>
+            <h2>30</h2>
+            <p>Years in Business</p>
+          </div>
+          <div class="stat-box projects">
+            <div class="image-container"></div>
+            <h2>1000+</h2>
+            <p>Projects Completed</p>
+          </div>
+        </div>
+
+        <!-- Second Column (1 Raised Box) -->
+        <div class="stats-column center">
+          <div class="stat-box clients">
+            <div class="image-container"></div>
+            <h2>95%</h2>
+            <p>Client Retention</p>
+          </div>
+        </div>
+
+        <!-- Third Column (2 Boxes) -->
+        <div class="stats-column">
+          <div class="stat-box locations">
+            <div class="image-container"></div>
+            <h2>10</h2>
+            <p>Global Locations</p>
+          </div>
+          <div class="stat-box employees">
+            <div class="image-container"></div>
+            <h2>2000+</h2>
+            <p>Global Employees</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partner's Hub End-->
+
+    <!--Services Start-->
+    <section class="Services py-5" id="service">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-4">
+            <span class="subtitle-two">Our Services</span>
+            <h1 class="mb-4">What We Do</h1>
+          </div>
+        </div>
+
+        <!-- Custom Slider for Services -->
+        <div class="service-slider">
+          <div class="slider-container">
+            <!-- Slider Item 1 -->
+            <div class="slider-item">
+              <div class="services-card">
+                <div class="card-flip-container">
+                  <div class="card-front">
+                    <div class="services__icon">
+                      <img src="img/webdevelop.png" alt="" />
+                    </div>
+                    <h4>Website Development</h4>
+                  </div>
+                  <div class="card-back">
+                    <p>
+                      We create responsive, user-friendly websites tailored to
+                      your business, ensuring a seamless online experience that
+                      engages users and meets your specific needs, from simple
+                      sites to complex platforms.
+                    </p>
+                  </div>
+                </div>
+                <!-- Know More Button -->
+                <button class="know-more-btn">Know More</button>
+              </div>
+            </div>
+
+            <!-- Slider Item 2 -->
+            <div class="slider-item">
+              <div class="services-card">
+                <div class="card-flip-container">
+                  <div class="card-front">
+                    <div class="services__icon">
+                      <img src="img/Appdev.png" alt="" />
+                    </div>
+                    <h4>Mobile App Development</h4>
+                  </div>
+                  <div class="card-back">
+                    <p>
+                      Our mobile app development services deliver feature-rich,
+                      user-friendly apps for iOS and Android, providing engaging
+                      experiences that drive business growth and bring your
+                      brand to customers’ fingertips.
+                    </p>
+                  </div>
+                </div>
+                <!-- Know More Button -->
+                <button class="know-more-btn">Know More</button>
+              </div>
+            </div>
+
+            <!-- Slider Item 3 -->
+            <div class="slider-item">
+              <div class="services-card">
+                <div class="card-flip-container">
+                  <div class="card-front">
+                    <div class="services__icon">
+                      <img src="img/ecom.png" alt="" />
+                    </div>
+                    <h4>Ecommerce Development</h4>
+                  </div>
+                  <div class="card-back">
+                    <p>
+                      We design customized ecommerce platforms that enhance user
+                      experience, boost engagement, and convert visitors into
+                      loyal customers, ensuring your online store achieves its
+                      full sales potential.
+                    </p>
+                  </div>
+                </div>
+                <!-- Know More Button -->
+                <button class="know-more-btn">Know More</button>
+              </div>
+            </div>
+
+            <!-- Slider Item 4 -->
+            <div class="slider-item">
+              <div class="services-card">
+                <div class="card-flip-container">
+                  <div class="card-front">
+                    <div class="services__icon">
+                      <img src="img/uiux.png" alt="" />
+                    </div>
+                    <h4>UI UX Designing</h4>
+                  </div>
+                  <div class="card-back">
+                    <p>
+                      Our UI/UX design services focus on creating visually
+                      appealing, intuitive interfaces that enhance usability,
+                      engagement, and satisfaction across all devices,
+                      delivering a seamless user experience.
+                    </p>
+                  </div>
+                </div>
+                <!-- Know More Button -->
+                <button class="know-more-btn">Know More</button>
+              </div>
+            </div>
+
+            <!-- Slider Item 5 -->
+            <div class="slider-item">
+              <div class="services-card">
+                <div class="card-flip-container">
+                  <div class="card-front">
+                    <div class="services__icon">
+                      <img src="img/seo.png" alt="" />
+                    </div>
+                    <h4>SEO & Content Writing</h4>
+                  </div>
+                  <div class="card-back">
+                    <p>
+                      Enhance your online presence with SEO strategies and
+                      compelling content that drives traffic, improves search
+                      rankings, and builds brand authority, helping your
+                      business stand out in a crowded market.
+                    </p>
+                  </div>
+                </div>
+                <!-- Know More Button -->
+                <button class="know-more-btn">Know More</button>
+              </div>
+            </div>
+
+            <!-- Slider Item 6 -->
+            <div class="slider-item">
+              <div class="services-card">
+                <div class="card-flip-container">
+                  <div class="card-front">
+                    <div class="services__icon">
+                      <img src="img/digmark.png" alt="" />
+                    </div>
+                    <h4>Digital Marketing</h4>
+                  </div>
+                  <div class="card-back">
+                    <p>
+                      Our digital marketing strategies drive targeted traffic,
+                      increase conversions, and maximize online reach through
+                      paid ads, social media, and email campaigns, accelerating
+                      your brand's growth effectively.
+                    </p>
+                  </div>
+                </div>
+                <!-- Know More Button -->
+                <button class="know-more-btn">Know More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls
+            <button class="slider-prev">&#10094;</button>
+            <button class="slider-next">&#10095;</button> -->
+        </div>
+      </div>
+    </section>
+    <!--Services end-->
+
+    <!--Clients section-->
+    <!-- Clients Section -->
+    <div class="client-section text-center my-5">
+      <div class="container">
+        <h6 style="color: #5b0e2d; font-size: 20px">OUR CLIENTS</h6>
+        <h2 class="fw-bold" style="font-size: 36px; margin-bottom: 50px;">People Who Trust Us</h2>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-content">
+            <img src="logo1.png" alt="Vertex Compliance" />
+            <img src="logo2.png" alt="Citadel" />
+            <img src="logo3.png" alt="Health Roads" />
+            <img src="logo4.png" alt="Balan" />
+            <img src="logo5.png" alt="Binary Folks" />
+          </div>
+          <div class="carousel-content">
+            <img src="logo1.png" alt="Vertex Compliance" />
+            <img src="logo2.png" alt="Citadel" />
+            <img src="logo3.png" alt="Health Roads" />
+            <img src="logo4.png" alt="Balan" />
+            <img src="logo5.png" alt="Binary Folks" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5" id="contact">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6" data-wow-delay="0.1s">
+            <span class="subtitle-two">Get in Touch</span>
+            <h1 class="mb-4">Contact For Any Query</h1>
+            <p class="mb-4">
+              Have a question or need assistance? We’re here to help! Whether
+              you’re looking for expert advice on Website Development, SEO,
+              digital marketing, or any of our other services, our team is ready
+              to provide the solutions you need to grow your business. Let us
+              know how we can assist you, and we’ll get back to you promptly.
+            </p>
+
+            <iframe
+              class="position-relative w-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923040553!2d77.23700973928675!3d28.522404037240705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1729697953635!5m2!1sen!2sin"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-md-6">
+            <div class="bg-light p-3 p-lg-5 h-100 d-flex align-items-center">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control border-0"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label for="name">Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control border-0"
+                        id="email"
+                        placeholder="Your Email"
+                      />
+                      <label for="email">Your Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control border-0"
+                        id="Contact"
+                        placeholder="Contact No."
+                      />
+                      <label for="Contact">Contact No.</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <select class="form-select border-0" style="height: 55px">
+                      <option selected>Select A Service</option>
+                      <option value="1">Website Development</option>
+                      <option value="2">Mobile App Development</option>
+                      <option value="3">Ecommerce Development</option>
+                      <option value="4">UI UX Designing</option>
+                      <option value="5">SEO & Content Writing</option>
+                      <option value="6">Digital Marketing</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control border-0"
+                        placeholder="Leave a message here"
+                        id="message"
+                        style="height: 120px"
+                      ></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="border-0 mainbtn w-100 py-3" type="submit">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Twictech</span>
+            </a>
+            <p>
+              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+              nada terra videa magna derita valies darta donna mare fermentum
+              iaculis eu non diam phasellus.
+            </p>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p>United States</p>
+            <p class="mt-4">
+              <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+            </p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span> <strong class="sitename">Twictech</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- intl-tel-input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+      // Dropdown on mouse hover
+      const $dropdown = $(".dropdown");
+      const $dropdownToggle = $(".dropdown-toggle");
+      const $dropdownMenu = $(".dropdown-menu");
+      const showClass = "show";
+
+      $(window).on("load resize", function () {
+        if (this.matchMedia("(min-width: 992px)").matches) {
+          $dropdown.hover(
+            function () {
+              const $this = $(this);
+              $this.addClass(showClass);
+              $this.find($dropdownToggle).attr("aria-expanded", "true");
+              $this.find($dropdownMenu).addClass(showClass);
+            },
+            function () {
+              const $this = $(this);
+              $this.removeClass(showClass);
+              $this.find($dropdownToggle).attr("aria-expanded", "false");
+              $this.find($dropdownMenu).removeClass(showClass);
+            }
+          );
+        } else {
+          $dropdown.off("mouseenter mouseleave");
+        }
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
