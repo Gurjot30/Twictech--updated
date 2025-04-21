@@ -1394,7 +1394,12 @@ body {
 --------------------------------------------------------------*/
 .footer {
   color: white;
-  background-color: #5b0e2d;
+  background: #f92c8b;
+  background: -moz-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: linear-gradient(to right, #192133 0%, #e84266 100%);
+  -webkit-box-shadow: 0 10px 15px 0px rgba(175, 0, 202, 0.2);
+  box-shadow: 0 10px 15px 0px rgba(175, 0, 202, 0.2);
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -1443,8 +1448,8 @@ body {
 }
 
 .footer .social-links a:hover {
-  color: yellow;
-  border-color: yellow;
+  color: #e84266;
+  border-color: #e84266;
 }
 
 .footer h4 {
@@ -1488,7 +1493,7 @@ body {
 }
 
 .footer .footer-links ul a:hover {
-  color: yellow;
+  color: #192133;
 }
 
 .footer .footer-contact p {
