@@ -504,12 +504,7 @@ body {
 .navbar {
   margin: 30px auto;
   padding: 20px 40px;
-  background: #f92c8b;
-  background: -moz-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
-  background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
-  background: linear-gradient(to right, #e84266 0%, #192133 100%);
-  -webkit-box-shadow: 0 10px 15px 0px rgba(175, 0, 202, 0.2);
-  box-shadow: 0 10px 15px 0px rgba(175, 0, 202, 0.2);
+  background-color: white;
   border-radius: 50px;
   box-shadow: white;
   display: flex;
@@ -569,7 +564,7 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: #5b0e2d;
   font-weight: bolder;
   transition: color 0.3s ease;
   display: flex;
@@ -1151,6 +1146,117 @@ body {
 .divider {
   border-bottom: 2px dashed black;
   margin: 5px 0;
+}
+
+/* Proven process section */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+  max-width: 720px;
+  margin: 1rem auto 3rem;
+  font-size: 1rem;
+  margin-bottom: 70px;
+}
+
+.pentagon {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+}
+
+.step {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-circle {
+  background: white;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle svg {
+  width: 32px;
+  height: 32px;
+  fill: #f57c00;
+}
+
+
+
+
+.top-half {
+  background: linear-gradient(135deg, #d32f2f, #f57c00);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.top-half img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.bottom-half span {
+  color: #f57c00;
+  margin-right: 6px;
+}
+
+/* Pentagon layout */
+#step1 { top: 10%; left: 50%; }
+#step2 { top: 33%; left: 93%; }
+#step3 { top: 82%; left: 74%; }
+#step4 { top: 82%; left: 26%; }
+#step5 { top: 33%; left: 7%; }
+
+.arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 550px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.arrows path {
+  stroke: #f57c00;
+  stroke-width: 2.5;
+  fill: none;
 }
 
 /* ============== Services Section ============== */
