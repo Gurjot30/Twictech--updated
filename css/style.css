@@ -33,6 +33,11 @@ body {
   background: #e68900;
 }
 
+body.modal-open {
+  overflow: hidden; /* Prevent background scroll when modal is open */
+}
+
+
 /* Modal Background */
 .modal {
   display: flex;
@@ -44,6 +49,7 @@ body {
   background: rgba(0, 0, 0, 0.5); /* Dark overlay */
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* No scrollbars */
 }
 
 /* Modal Content */
@@ -51,7 +57,7 @@ body {
   background: white;
   padding: 15px;
   border-radius: 8px;
-  width: 750px; /* Increased width */
+  width: 700px; /* Increased width */
   height: 900px;
   max-width: 95%;
   text-align: left;
@@ -61,8 +67,15 @@ body {
   flex-direction: column;
   gap: 15px;
   max-height: 95vh;
-  overflow-y: scroll; /* No scrollbars */
+  overflow: hidden; /* fully contain content */
 }
+
+@media (max-width: 768px) {
+  .modal-content {
+    transform: scale(0.9);
+  }
+}
+
 
 /* Close Button */
 .close-popup {
