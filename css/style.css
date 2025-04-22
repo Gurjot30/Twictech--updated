@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
+  overflow-x: hidden;
 }
 
 /* General Styles */
@@ -61,7 +62,7 @@ body {
   flex-direction: column;
   gap: 15px;
   max-height: 95vh;
-  overflow-y: scroll; /* No scrollbars */
+  overflow-y: hidden;
 }
 
 /* Close Button */
@@ -499,6 +500,7 @@ body {
   padding: 0;
   font-family: "Segoe UI", sans-serif;
   background-color: #f9f9f9;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -683,7 +685,7 @@ body {
     flex-direction: column;
     gap: 15px;
     max-height: 95vh;
-    overflow-y: scroll; /* No scrollbars */
+    overflow-y: hidden;
   }
   .modal-body {
     display: block;
@@ -1048,6 +1050,7 @@ body {
   margin: 0;
   padding: 0;
   background: #f9f9f9;
+  overflow-x: hidden;
 }
 
 /* Section Styling */
@@ -1635,6 +1638,7 @@ body {
   color: #212529;
   background-color: #ffffff;
   font-family: #212529;
+  overflow-x: hidden;
 }
 
 :root {
