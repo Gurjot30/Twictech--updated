@@ -1163,64 +1163,83 @@ body {
   margin-bottom: 70px;
 }
 
-.pentagon {
-  position: relative;
-  width: 550px;
-  height: 550px;
-  margin: 0 auto;
+/* Main container for the process steps */
+.process-container2 {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
+.row {
+  display: flex;
+  justify-content: center; /* centers the group */
+  align-items: flex-start;
+  gap: 4rem; /* nice, visible gap between columns */
+  flex-wrap: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  flex: 1; /* equal width for each column */
+  max-width: 33.33%;
+}
+
+
+/* Individual step card */
 .step {
-  position: absolute;
-  width: 200px;
-  height: 200px;
   background: white;
+  width: 180px;
+  height: 220px;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  transform: translate(-50%, -50%);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  padding: 0;
+  max-width: 180px; /* slightly narrower */
+}
+
+/* Top colored bar with icon */
+.top-half {
+  background: linear-gradient(135deg, #d32f2f, #f57c00);
+  width: 100%; /* ensures full width */
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* remove any accidental margins */
+  padding: 0; /* remove any padding */
+  border-top-left-radius: 20px; /* match card corners */
+  border-top-right-radius: 20px;
 }
 
 .icon-circle {
-  background: white;
-  padding: 14px;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0; /* remove extra space */
+  margin: 0;  /* no external spacing */
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .icon-circle svg {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   fill: #f57c00;
 }
 
-
-
-
-.top-half {
-  background: linear-gradient(135deg, #d32f2f, #f57c00);
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.top-half img {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) invert(1);
-  background: white;
-  padding: 15px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
+/* Text section */
 .bottom-half {
   flex: 1;
   display: flex;
@@ -1236,28 +1255,20 @@ body {
   margin-right: 6px;
 }
 
-/* Pentagon layout */
-#step1 { top: 10%; left: 50%; }
-#step2 { top: 33%; left: 93%; }
-#step3 { top: 82%; left: 74%; }
-#step4 { top: 82%; left: 26%; }
-#step5 { top: 33%; left: 7%; }
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.arrows {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 550px;
-  height: 550px;
-  pointer-events: none;
-  z-index: -1;
+  .step {
+    width: 80%;
+  }
 }
 
-.arrows path {
-  stroke: #f57c00;
-  stroke-width: 2.5;
-  fill: none;
-}
+/* Removed unused styles (pentagon/arrows) */
+
 
 /* ============== Services Section ============== */
 .services-card {
