@@ -527,20 +527,16 @@ body {
   background-color: #e84266;
   color: white;
   border: none;
-  padding: 30px 20px;
-  border-radius: 0px;
+  padding: 10px 20px;
+  border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  height: 65px;
-  margin-top: -15px;
-  display: flex;              /* Flexbox for centering */
-  align-items: center;        /* Vertically center */
-  justify-content: center;    /* Horizontally center */
+  margin-top: -3px;
 }
 
 .connect-btn:hover {
-  background-color: #5b0e2d;
+  background-color: #c93556;
 }
 
 .navbar {
