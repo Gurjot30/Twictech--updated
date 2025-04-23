@@ -581,8 +581,9 @@ body {
   color: #5b0e2d;
   text-decoration: none;
   margin: 0 15px;
-  font-weight: 500;
+  font-weight: bold;
   transition: color 0.3s ease;
+  /* font-size: 17px; */
 }
 
 .navbar.scrolled .nav-links a {
